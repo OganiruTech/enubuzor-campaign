@@ -1,0 +1,66 @@
+{
+  "name": "CommunityIssue",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the community issue"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the issue"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "roads",
+        "flooding",
+        "youth_unemployment",
+        "schools",
+        "healthcare",
+        "security",
+        "electricity",
+        "water",
+        "other"
+      ],
+      "description": "Category of the issue"
+    },
+    "community": {
+      "type": "string",
+      "description": "Community or ward where the issue is located"
+    },
+    "ward": {
+      "type": "string",
+      "description": "Ward name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "acknowledged",
+        "in_progress",
+        "resolved"
+      ],
+      "default": "pending"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Photo evidence of the issue"
+    },
+    "reporter_name": {
+      "type": "string"
+    },
+    "reporter_phone": {
+      "type": "string"
+    },
+    "upvotes": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "community"
+  ]
+}

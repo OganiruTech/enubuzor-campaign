@@ -1,0 +1,50 @@
+{
+  "name": "Donation",
+  "type": "object",
+  "properties": {
+    "donor_name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "bank_transfer",
+        "online",
+        "cash"
+      ],
+      "default": "bank_transfer"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": false
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "failed"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "donor_name",
+    "amount"
+  ]
+}

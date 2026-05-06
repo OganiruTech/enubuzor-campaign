@@ -1,0 +1,65 @@
+{
+  "name": "Volunteer",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    },
+    "community": {
+      "type": "string"
+    },
+    "role_type": {
+      "type": "string",
+      "enum": [
+        "volunteer",
+        "polling_unit_agent",
+        "ward_mobilizer",
+        "campaign_ambassador"
+      ],
+      "default": "volunteer"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "age_group": {
+      "type": "string",
+      "enum": [
+        "18-25",
+        "26-35",
+        "36-45",
+        "46-55",
+        "56+"
+      ]
+    },
+    "skills": {
+      "type": "string",
+      "description": "Skills the volunteer can contribute"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "pending"
+      ],
+      "default": "pending"
+    },
+    "assigned_ward": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name",
+    "phone",
+    "ward"
+  ]
+}

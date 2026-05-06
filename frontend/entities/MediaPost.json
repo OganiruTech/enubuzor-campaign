@@ -1,0 +1,42 @@
+{
+  "name": "MediaPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "Post content or description"
+    },
+    "media_type": {
+      "type": "string",
+      "enum": [
+        "photo",
+        "video",
+        "announcement",
+        "press_release"
+      ],
+      "default": "announcement"
+    },
+    "media_url": {
+      "type": "string",
+      "description": "URL to media file"
+    },
+    "thumbnail_url": {
+      "type": "string"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "tags": {
+      "type": "string",
+      "description": "Comma-separated tags"
+    }
+  },
+  "required": [
+    "title",
+    "media_type"
+  ]
+}

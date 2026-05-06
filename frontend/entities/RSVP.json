@@ -1,0 +1,27 @@
+{
+  "name": "RSVP",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    },
+    "guests": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "required": [
+    "event_id",
+    "name",
+    "phone"
+  ]
+}

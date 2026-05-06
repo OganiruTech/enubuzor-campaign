@@ -1,0 +1,59 @@
+{
+  "name": "CampaignEvent",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "town_hall",
+        "community_visit",
+        "youth_meeting",
+        "campaign_rally",
+        "press_conference",
+        "fundraiser"
+      ],
+      "default": "community_visit"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    },
+    "rsvp_count": {
+      "type": "number",
+      "default": 0
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "upcoming",
+        "ongoing",
+        "completed",
+        "cancelled"
+      ],
+      "default": "upcoming"
+    }
+  },
+  "required": [
+    "title",
+    "date",
+    "location"
+  ]
+}

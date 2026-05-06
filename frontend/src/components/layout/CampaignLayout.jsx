@@ -41,10 +41,12 @@ export default function CampaignLayout() {
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center shadow-sm">
-                <span className="font-heading font-bold text-secondary-foreground text-sm">NDC</span>
-              </div>
+            <Link to="/" className="flex items-center gap-3">
+              <img
+                src="/logo.png"
+                alt="Campaign logo"
+                className="w-9 h-9 rounded-full object-cover border border-white/10 shadow-sm"
+              />
               <div className="hidden sm:block">
                 <p className="font-heading font-bold text-sm leading-tight">Ogbuefi Nicholas Enubuzor</p>
                 <p className="text-[10px] opacity-80">NDC · Ukwuani/Ndokwa West</p>
@@ -117,11 +119,15 @@ export default function CampaignLayout() {
       <footer className="bg-primary text-primary-foreground py-12 px-4 mt-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center">
-                <span className="font-heading font-bold text-secondary-foreground text-xs">NDC</span>
+            <div className="flex items-center gap-3 mb-3">
+              <img
+                src="/logo.png"
+                alt="Campaign logo"
+                className="w-10 h-10 rounded-full object-cover border border-white/10 shadow-sm"
+              />
+              <div>
+                <h3 className="font-heading font-bold text-lg">Ogbuefi Nicholas Enubuzor</h3>
               </div>
-              <h3 className="font-heading font-bold text-lg">Ogbuefi Nicholas Enubuzor</h3>
             </div>
             <p className="text-sm opacity-80">NDC Candidate for House of Representatives, Ukwuani/Ndokwa West Constituency</p>
             <p className="text-sm opacity-60 mt-2 italic">Service to the People.</p>
@@ -141,9 +147,9 @@ export default function CampaignLayout() {
             <p className="text-sm opacity-70">Ukwuani/Ndokwa West, Delta State</p>
             <p className="text-sm opacity-70 mt-1">Nigeria</p>
             <div className="mt-4 flex gap-3">
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs hover:bg-secondary/80 cursor-pointer transition-colors">FB</div>
+              {/* <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs hover:bg-secondary/80 cursor-pointer transition-colors">FB</div>
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs hover:bg-secondary/80 cursor-pointer transition-colors">X</div>
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs hover:bg-secondary/80 cursor-pointer transition-colors">IG</div>
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs hover:bg-secondary/80 cursor-pointer transition-colors">IG</div> */}
             </div>
           </div>
         </div>

@@ -76,7 +76,7 @@ export default function Chat() {
         </div>
         <h1 className="font-heading text-2xl font-bold text-foreground">Ask About Our Campaign</h1>
         <p className="text-muted-foreground text-sm mt-1">
-          Chat with our assistant to learn about Ogbuefi Nicholas Enubuzor and his vision for Ukwuani/Ndokwa West.
+          Chat with our assistant to learn about <strong className="font-semibold">Ogbuefi Nicholas Enubuzor</strong> and his vision for Ukwuani/Ndokwa West.
         </p>
       </div>
 

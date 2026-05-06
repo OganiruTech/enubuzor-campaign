@@ -11,12 +11,13 @@ export default function HeroSection() {
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
-      <div className="absolute inset-0 opacity-10" style={{
-        backgroundImage: 'url("https://images.unsplash.com/photo-1604933762023-7213af7ff7e7?w=1920&q=80")',
+      <div className="absolute inset-0 opacity-25" style={{
+        backgroundImage: 'url("/enubuzor.jpeg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        filter: 'brightness(0.75)',
       }} />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-transparent to-primary/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/25" />
 
       {/* Decorative blobs */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl" />
@@ -39,8 +40,8 @@ export default function HeroSection() {
               <span className="text-secondary">the People.</span>
             </h1>
 
-            <p className="text-white/80 text-lg mb-3 max-w-lg">
-              Vote <strong className="text-white">Ogbuefi Nicholas Enubuzor</strong> for House of Representatives,
+            <p className="text-white text-lg mb-3 max-w-lg">
+              Vote <strong className="font-heading text-white font-bold">Ogbuefi Nicholas Enubuzor</strong> for House of Representatives,
               Ukwuani/Ndokwa West Constituency.
             </p>
             <p className="text-white/60 text-base mb-8 max-w-lg">
@@ -67,22 +68,20 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:flex justify-center"
+            className="flex justify-center"
           >
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full bg-gradient-to-br from-secondary/30 to-primary/50 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full bg-white/10 backdrop-blur-sm border-2 border-white/20 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <p className="font-heading text-3xl font-bold">VOTE</p>
-                    <p className="font-heading text-xl font-semibold text-secondary">NDC</p>
-                    <div className="w-12 h-0.5 bg-secondary mx-auto my-2" />
-                    <p className="text-xs opacity-70">Ukwuani/Ndokwa West</p>
-                    <p className="text-xs opacity-50 mt-1">Service to the People</p>
-                  </div>
-                </div>
+            <div className="relative w-full max-w-md">
+              <div className="overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl">
+                <img
+                  src="/enubuzor.jpeg"
+                  alt="Ogbuefi Nicholas Enubuzor"
+                  className="h-[28rem] w-full object-cover object-top"
+                />
               </div>
-              <div className="absolute -top-4 -right-4 bg-secondary text-secondary-foreground rounded-full px-4 py-2 font-bold text-sm shadow-lg">
-                2027
+              <div className="absolute bottom-0 left-1/2 w-[calc(100%_-_2rem)] -translate-x-1/2 rounded-3xl bg-primary/95 border border-white/20 p-6 shadow-xl text-white">
+                {/* <p className="text-xs uppercase tracking-[0.3em] text-secondary/80 mb-2">Official Campaign Portrait</p> */}
+                {/* <h2 className="font-heading text-3xl font-bold">Ogbuefi Nicholas Enubuzor</h2> */}
+                <p className="text-sm opacity-80 mt-1">NDC Candidate • Ukwuani/Ndokwa West</p>
               </div>
             </div>
           </motion.div>

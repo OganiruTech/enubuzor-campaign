@@ -55,7 +55,7 @@ export default function PromisesSection() {
             Together We Build a Stronger Future
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Ogbuefi Nicholas Enubuzor is committed to representing the people of Ukwuani/Ndokwa West 
+            <strong className="font-semibold">Ogbuefi Nicholas Enubuzor</strong> is committed to representing the people of Ukwuani/Ndokwa West 
             with integrity, passion, and a clear vision for progress.
           </p>
         </div>

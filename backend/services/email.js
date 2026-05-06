@@ -19,6 +19,16 @@ const getTransporter = async () => {
   if (transporter) return transporter;
 
   if (IS_PROD) {
+    const missingCreds = [
+      !process.env.SMTP_HOST && 'SMTP_HOST',
+      !process.env.SMTP_USER && 'SMTP_USER',
+      !process.env.SMTP_PASS && 'SMTP_PASS',
+    ].filter(Boolean);
+
+    if (missingCreds.length > 0) {
+      console.error(`⚠️ Missing production SMTP configuration: ${missingCreds.join(', ')}. Email sending will fail until these are set.`);
+    }
+
     // Production: use real SMTP from .env
     transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -33,6 +43,7 @@ const getTransporter = async () => {
     try {
       await transporter.verify();
       console.log('✅ Production email transport ready');
+      console.log(`   SMTP host: ${process.env.SMTP_HOST}`);
     } catch (err) {
       console.warn('⚠️  Production SMTP error:', err.message);
     }
@@ -90,7 +101,7 @@ const wrap = (body) => `
 <body>
   <div class="container">
     <div class="header">
-      <h1>NDC Campaign — Ogbuefi Nicholas Enubuzor</h1>
+      <h1>NDC Campaign — <strong style="font-weight: 800;">Ogbuefi Nicholas Enubuzor</strong></h1>
       <p>Ukwuani/Ndokwa West Constituency · Service to the People</p>
     </div>
     <div class="body">${body}</div>
@@ -111,9 +122,10 @@ const send = async (to, subject, html) => {
       console.log(`\n📧 Email sent [DEV]`);
       console.log(`   To:      ${to}`);
       console.log(`   Subject: ${subject}`);
-      console.log(`   Preview: ${previewUrl}\n`);
+      console.log(`   MessageId: ${info.messageId}`);
+      console.log(`   Preview: ${previewUrl || 'not available'}\n`);
     } else {
-      console.log(`📧 Email sent → ${to} [${subject}]`);
+      console.log(`📧 Email sent → ${to} [${subject}] messageId=${info.messageId}`);
     }
   } catch (err) {
     console.error(`❌ Email error [${subject}] → ${to}:`, err.message);

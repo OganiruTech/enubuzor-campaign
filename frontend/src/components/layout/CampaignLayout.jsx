@@ -29,8 +29,7 @@ export default function CampaignLayout() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Top Bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground shadow-md">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
         <div className="flex items-center justify-between px-4 h-16">
           <div className="flex items-center gap-3">
             <Button
@@ -72,7 +71,7 @@ export default function CampaignLayout() {
           </nav>
 
           <Link to="/volunteer">
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold text-xs sm:text-sm shadow-sm">
+            <Button className="bg-secondary text-secondary-foreground font-semibold text-xs sm:text-sm">
               Join Campaign
             </Button>
           </Link>
@@ -116,8 +115,8 @@ export default function CampaignLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12 px-4 mt-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="bg-primary text-primary-foreground py-10 px-4 mt-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <div className="flex items-center gap-3 mb-3">
               <img

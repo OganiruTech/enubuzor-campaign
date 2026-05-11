@@ -1,7 +1,7 @@
-// src/components/home/PromisesSection.jsx
+﻿// src/components/home/PromisesSection.jsx
 
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { 
   Megaphone, Building2, GraduationCap, HeartPulse, Shield, Eye
 } from 'lucide-react';
@@ -61,23 +61,19 @@ export default function PromisesSection() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {promises.map((promise, index) => {
+          {promises.map((promise) => {
             const Icon = promise.icon;
             return (
-              <motion.div
+              <div
                 key={promise.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                className="bg-card rounded-2xl p-6 border border-border"
               >
-                <div className={`w-12 h-12 rounded-xl ${promise.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <Icon className="h-6 w-6" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{promise.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{promise.description}</p>
-              </motion.div>
+              </div>
             );
           })}
         </div>

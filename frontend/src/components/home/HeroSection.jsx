@@ -20,8 +20,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/25" />
 
       {/* Decorative blobs */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-10 w-72 h-72 bg-secondary/20 rounded-full blur-2xl" />
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-2xl" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">

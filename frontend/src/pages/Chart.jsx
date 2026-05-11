@@ -21,7 +21,7 @@ export default function Chat() {
     {
       role: 'assistant',
       content:
-        "Welcome! 🇳🇬 I'm the ADC Campaign Assistant for **Ogbuefi Nicholas Enubuzor**. I can help you learn about our candidate, campaign promises, upcoming events, or how to get involved. What would you like to know?",
+        "Welcome! 🇳🇬 I'm the NDC Campaign Assistant for **Ogbuefi Nicholas Enubuzor**. I can help you learn about our candidate, campaign promises, upcoming events, or how to get involved. What would you like to know?",
     },
   ]);
   const [input, setInput] = useState('');
@@ -72,7 +72,7 @@ export default function Chat() {
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-3">
           <Bot className="h-4 w-4 text-primary" />
-          <span className="text-primary text-sm font-semibold">ADC Campaign Assistant</span>
+          <span className="text-primary text-sm font-semibold">NDC Campaign Assistant</span>
         </div>
         <h1 className="font-heading text-2xl font-bold text-foreground">Ask About Our Campaign</h1>
         <p className="text-muted-foreground text-sm mt-1">

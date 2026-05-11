@@ -15,7 +15,7 @@ const navItems = [
   { path: '/volunteer', label: 'Join Us',           icon: Users },
   { path: '/events',    label: 'Events',            icon: Calendar },
   { path: '/media',     label: 'News & Media',      icon: Megaphone },
-  { path: '/donate',    label: 'Support',           icon: HandHeart },
+  { path: '/donate',    label: 'Donate',            icon: HandHeart },
   { path: '/chat',      label: 'Ask NDC Bot',       icon: MessageCircle },
 ];
 

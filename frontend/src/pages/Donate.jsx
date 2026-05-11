@@ -61,7 +61,7 @@ export default function Donate() {
           <div className="space-y-2 text-sm text-muted-foreground">
             <p><strong className="text-foreground">Bank:</strong> [Campaign Bank Name]</p>
             <p><strong className="text-foreground">Account:</strong> [Account Number]</p>
-            <p><strong className="text-foreground">Name:</strong> ADC Campaign - Enubuzor</p>
+            <p><strong className="text-foreground">Name:</strong> NDC Campaign - Enubuzor</p>
             <p><strong className="text-foreground">Amount:</strong> ₦{Number(customAmount || form.amount).toLocaleString()}</p>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function Donate() {
       <div className="text-center mb-10">
         <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
           <HandHeart className="h-4 w-4 text-primary" />
-          <span className="text-primary text-sm font-semibold">Support the Campaign</span>
+          <span className="text-primary text-sm font-semibold">Donate to the Campaign</span>
         </div>
         <h1 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-3">
           Invest in Our Future
@@ -212,7 +212,7 @@ export default function Donate() {
                 {[
                   { label: 'Bank Name',       value: '[Campaign Bank]' },
                   { label: 'Account Number',  value: '[Account Number]' },
-                  { label: 'Account Name',    value: 'ADC Campaign - Enubuzor' },
+                  { label: 'Account Name',    value: 'NDC Campaign - Enubuzor' },
                 ].map(item => (
                   <div key={item.label} className="bg-card rounded-lg p-3">
                     <p className="text-muted-foreground text-xs">{item.label}</p>

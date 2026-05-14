@@ -48,7 +48,7 @@ export default function CampaignLayout() {
               />
               <div className="hidden sm:block">
                 <p className="font-heading font-bold text-sm leading-tight">Ogbuefi Nicholas Enubuzor</p>
-                <p className="text-[10px] opacity-80">NDC · Ukwuani/Ndokwa West</p>
+                <p className="text-[10px] opacity-80">NDC · Ukwuani/Ndokwa federal</p>
               </div>
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function CampaignLayout() {
                 <h3 className="font-heading font-bold text-lg">Ogbuefi Nicholas Enubuzor</h3>
               </div>
             </div>
-            <p className="text-sm opacity-80">NDC Candidate for House of Representatives, Ukwuani/Ndokwa West Constituency</p>
+            <p className="text-sm opacity-80">NDC Aspirant for House of Representatives, Ukwuani/Ndokwa Federal Constituency</p>
             <p className="text-sm opacity-60 mt-2 italic">Service to the People.</p>
           </div>
           <div>

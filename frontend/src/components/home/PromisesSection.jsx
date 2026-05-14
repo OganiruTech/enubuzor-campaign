@@ -52,11 +52,10 @@ export default function PromisesSection() {
         <div className="text-center mb-14">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Our Promise to You</p>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Together We Build a Stronger Future
+            A New Voice for Progress. A Stronger Future for Our People.
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            <strong className="font-semibold">Ogbuefi Nicholas Enubuzor</strong> is committed to representing the people of Ukwuani/Ndokwa West 
-            with integrity, passion, and a clear vision for progress.
+            <strong className="font-semibold">Ogbuefi Nicholas Enubuzor</strong> is stepping forward with a bold commitment to serve the people of Ukwuani/Ndokwa Federal Consistuency through purposeful leadership, accountability, and people-centered development.
           </p>
         </div>
 

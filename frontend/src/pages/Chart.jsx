@@ -21,7 +21,7 @@ export default function Chat() {
     {
       role: 'assistant',
       content:
-        "Welcome! 🇳🇬 I'm the NDC Campaign Assistant for **Ogbuefi Nicholas Enubuzor**. I can help you learn about our candidate, campaign promises, upcoming events, or how to get involved. What would you like to know?",
+        "Welcome! 🇳🇬 I'm the NDC Campaign Assistant for **Ogbuefi Nicholas Enubuzor**. I can help you learn about our aspirant, campaign promises, upcoming events, or how to get involved. What would you like to know?",
     },
   ]);
   const [input, setInput] = useState('');

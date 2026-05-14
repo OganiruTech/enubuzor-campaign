@@ -231,7 +231,7 @@ export default function Donate() {
                   'Fund community outreach programmes',
                   'Support ward-level mobilisation',
                   'Produce campaign materials',
-                  'Enable transport for candidate visits',
+                  'Enable transport for aspirant visits',
                 ].map(item => (
                   <li key={item} className="flex items-start gap-2">
                     <span className="text-primary mt-0.5">✓</span> {item}

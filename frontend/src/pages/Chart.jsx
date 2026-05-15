@@ -9,19 +9,24 @@ import { Send, Bot, User, Loader2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 
 const QUICK_QUESTIONS = [
-  'Who is Ogbuefi Nicholas Enubuzor?',
   'What are the campaign promises?',
+  'Who is Nicholas?',
   'How can I volunteer?',
   'When is the next event?',
   'How do I report a community issue?',
 ];
+
+const CANNED_REPLIES = {
+  campaign_promises: `**Ogbuefi Nicholas Enubuzor**’s campaign for the Ukwuani/Ndokwa Federal Constituency is focused on people-centered leadership, quality representation, infrastructure development, youth empowerment, accessible healthcare, improved community security, and transparent governance. His vision is to deliver practical solutions and ensure the voices of the people are effectively represented at the National Assembly.`,
+  who_is_nicholas: `**Ogbuefi Nicholas Enubuzor** is an aspirant under the National Democratic Congress (NDC) for the House of Representatives seat representing the Ukwuani/Ndokwa Federal Constituency in Delta State ahead of the 2027 general elections. His campaign is centered on the vision of “Service to the People,” with a focus on people-oriented leadership, effective representation, community development, and responsive governance for the constituency.`,
+};
 
 export default function Chat() {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
       content:
-        "Welcome! 🇳🇬 I'm the ADC Campaign Assistant for **Ogbuefi Nicholas Enubuzor**. I can help you learn about our Aspirant, campaign promises, upcoming events, or how to get involved. What would you like to know?",
+        "Welcome! 🇳🇬 I'm the NDC Campaign Assistant for **Ogbuefi Nicholas Enubuzor**. I can help you learn about our Aspirant, campaign promises, upcoming events, or how to get involved. What would you like to know?",
     },
   ]);
   const [input, setInput] = useState('');
@@ -36,10 +41,27 @@ export default function Chat() {
     const msg = (text || input).trim();
     if (!msg || loading) return;
 
+    const normalized = msg.toLowerCase().replace(/[?.]/g, '').trim();
+    const cannedResponse =
+      normalized === 'what are the campaign promises' || normalized.includes('campaign promises')
+        ? CANNED_REPLIES.campaign_promises
+        : normalized === 'who is nicholas' || normalized.includes('who is nicholas') || (normalized.includes('who is') && normalized.includes('nicholas'))
+        ? CANNED_REPLIES.who_is_nicholas
+        : null;
+
     const userMsg = { role: 'user', content: msg };
     setMessages((prev) => [...prev, userMsg]);
     setInput('');
     setLoading(true);
+
+    if (cannedResponse) {
+      setMessages((prev) => [
+        ...prev,
+        { role: 'assistant', content: cannedResponse },
+      ]);
+      setLoading(false);
+      return;
+    }
 
     try {
       // Build a trimmed history (last 10 messages) to send for context
@@ -49,9 +71,11 @@ export default function Chat() {
       }));
 
       const data = await api.chat.send(msg, history);
+      // Ensure the candidate name appears bold in any external replies
+      const reply = (data.reply || '').replace(/Ogbuefi Nicholas Enubuzor/g, '**Ogbuefi Nicholas Enubuzor**');
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: data.reply },
+        { role: 'assistant', content: reply },
       ]);
     } catch (err) {
       setMessages((prev) => [
@@ -72,7 +96,7 @@ export default function Chat() {
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-3">
           <Bot className="h-4 w-4 text-primary" />
-          <span className="text-primary text-sm font-semibold">ADC Campaign Assistant</span>
+          <span className="text-primary text-sm font-semibold">NDC Campaign Assistant</span>
         </div>
         <h1 className="font-heading text-2xl font-bold text-foreground">Ask About Our Campaign</h1>
         <p className="text-muted-foreground text-sm mt-1">

@@ -11,10 +11,10 @@ export default function HeroSection() {
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/90" />
-      <div className="absolute inset-0 opacity-25" style={{
+      <div className="absolute inset-0 opacity-50" style={{
         backgroundImage: 'url("/enubuzor.jpeg")',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center 35%',
         filter: 'brightness(0.75)',
       }} />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-primary/25" />
@@ -32,12 +32,12 @@ export default function HeroSection() {
           >
             <div className="inline-flex items-center gap-2 bg-secondary/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Vote className="h-4 w-4 text-secondary" />
-              <span className="text-secondary text-sm font-medium text-white">National Democratic Congress (NDC)</span>
+              <span className="text-sm font-medium text-white">National Democratic Congress (NDC)</span>
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">
               Service to<br />
-              <span className="text-secondary">the People.</span>
+              <span className="">the People.</span>
             </h1>
 
             <p className="text-white text-lg mb-3 max-w-lg">
@@ -50,7 +50,7 @@ export default function HeroSection() {
 
             <div className="flex flex-wrap gap-4">
               <Link to="/volunteer">
-                <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-bold text-base px-8 gap-2">
+                <Button size="lg" className="bg-red-600 text-white hover:bg-red-700 font-bold text-base px-8 gap-2">
                   <Users className="h-5 w-5" />
                   Join the Movement
                 </Button>

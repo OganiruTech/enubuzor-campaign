@@ -68,7 +68,7 @@ export default function Events() {
     <div className="max-w-6xl mx-auto px-4 py-10">
       <div className="mb-10">
         <h1 className="font-heading text-3xl font-bold text-foreground">Campaign Events</h1>
-        <p className="text-muted-foreground mt-1">Join us at our upcoming events across Ukwuani/Ndokwa West.</p>
+        <p className="text-muted-foreground mt-1">Join us at our upcoming events across Ukwuani/Ndokwa Federal Constituency.</p>
       </div>
 
       {isLoading ? (

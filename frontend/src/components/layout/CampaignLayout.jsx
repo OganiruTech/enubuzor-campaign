@@ -15,7 +15,7 @@ const navItems = [
   { path: '/volunteer', label: 'Join Us',           icon: Users },
   { path: '/events',    label: 'Events',            icon: Calendar },
   { path: '/media',     label: 'News & Media',      icon: Megaphone },
-  { path: '/donate',    label: 'Donate',            icon: HandHeart },
+  { path: '/donate',    label: 'Support',           icon: HandHeart },
   { path: '/chat',      label: 'Ask NDC Bot',       icon: MessageCircle },
 ];
 
@@ -29,7 +29,8 @@ export default function CampaignLayout() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
+      {/* Top Bar */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground shadow-md">
         <div className="flex items-center justify-between px-4 h-16">
           <div className="flex items-center gap-3">
             <Button
@@ -48,7 +49,7 @@ export default function CampaignLayout() {
               />
               <div className="hidden sm:block">
                 <p className="font-heading font-bold text-sm leading-tight">Ogbuefi Nicholas Enubuzor</p>
-                <p className="text-[10px] opacity-80">NDC · Ukwuani/Ndokwa federal</p>
+                <p className="text-[10px] opacity-80">NDC · Ukwuani/Ndokwa Federal</p>
               </div>
             </Link>
           </div>
@@ -71,7 +72,7 @@ export default function CampaignLayout() {
           </nav>
 
           <Link to="/volunteer">
-            <Button className="bg-secondary text-secondary-foreground font-semibold text-xs sm:text-sm">
+            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-semibold text-xs sm:text-sm shadow-sm">
               Join Campaign
             </Button>
           </Link>
@@ -115,8 +116,8 @@ export default function CampaignLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-10 px-4 mt-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <footer className="bg-primary text-primary-foreground py-12 px-4 mt-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-3">
               <img
@@ -143,7 +144,7 @@ export default function CampaignLayout() {
           </div>
           <div>
             <h4 className="font-semibold mb-3">Contact Campaign</h4>
-            <p className="text-sm opacity-70">Ukwuani/Ndokwa West, Delta State</p>
+            <p className="text-sm opacity-70">Ukwuani/Ndokwa Federal, Delta State</p>
             <p className="text-sm opacity-70 mt-1">Nigeria</p>
             <div className="mt-4 flex gap-3">
               {/* <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs hover:bg-secondary/80 cursor-pointer transition-colors">FB</div>

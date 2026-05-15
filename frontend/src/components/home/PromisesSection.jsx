@@ -1,7 +1,7 @@
 ﻿// src/components/home/PromisesSection.jsx
 
 import React from 'react';
-
+import { motion } from 'framer-motion';
 import { 
   Megaphone, Building2, GraduationCap, HeartPulse, Shield, Eye
 } from 'lucide-react';
@@ -52,27 +52,32 @@ export default function PromisesSection() {
         <div className="text-center mb-14">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Our Promise to You</p>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            A New Voice for Progress. A Stronger Future for Our People.
+            Together We Build a Stronger Future
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            <strong className="font-semibold">Ogbuefi Nicholas Enubuzor</strong> is stepping forward with a bold commitment to serve the people of Ukwuani/Ndokwa Federal Consistuency through purposeful leadership, accountability, and people-centered development.
+            <strong className="font-semibold">Ogbuefi Nicholas Enubuzor</strong> is committed to representing the people of Ukwuani/Ndokwa Federal
+            with integrity, passion, and a clear vision for progress.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {promises.map((promise) => {
+          {promises.map((promise, index) => {
             const Icon = promise.icon;
             return (
-              <div
+              <motion.div
                 key={promise.title}
-                className="bg-card rounded-2xl p-6 border border-border"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
+                <div className={`w-12 h-12 rounded-xl ${promise.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-heading font-semibold text-lg text-foreground mb-2">{promise.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{promise.description}</p>
-              </div>
+              </motion.div>
             );
           })}
         </div>

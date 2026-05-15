@@ -54,7 +54,7 @@ export default function VolunteerSignup() {
         </motion.div>
         <h1 className="font-heading text-3xl font-bold text-foreground mb-4">Welcome to the Team!</h1>
         <p className="text-muted-foreground text-lg mb-2">
-          Thank you for joining the movement. Together, we will build a stronger Ukwuani/Ndokwa West.
+          Thank you for joining the movement. Together, we will build a stronger Ukwuani/Ndokwa Federal Constituency.
         </p>
         <p className="text-muted-foreground">A campaign coordinator will contact you shortly.</p>
         {form.email && (

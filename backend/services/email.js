@@ -102,7 +102,7 @@ const wrap = (body) => `
   <div class="container">
     <div class="header">
       <h1>NDC Campaign — <strong style="font-weight: 800;">Ogbuefi Nicholas Enubuzor</strong></h1>
-      <p>Ukwuani/Ndokwa West Constituency · Service to the People</p>
+      <p>Ukwuani/Ndokwa Federal Constituency · Service to the People</p>
     </div>
     <div class="body">${body}</div>
     <div class="footer">© 2026 Ogbuefi Nicholas Enubuzor Campaign. All rights reserved. · <a href="https://enubuzor.org" style="color:#2d3a8c;">enubuzor.org</a></div>
@@ -169,7 +169,7 @@ export const sendVolunteerConfirmation = async (volunteer) => {
     <div class="field"><strong>Community:</strong> <span class="value">${volunteer.community || 'N/A'}</span></div>
     <hr />
     <p>A campaign coordinator will contact you at <strong>${volunteer.phone}</strong> shortly.</p>
-    <p>Together, we will deliver <em>Service to the People</em> for Ukwuani/Ndokwa West!</p>
+    <p>Together, we will deliver <em>Service to the People</em> for Ukwuani/Ndokwa Federal Constituency!</p>
     <a href="https://enubuzor.org/events" class="cta">View Upcoming Events</a>
   `);
   await send(volunteer.email, '🎉 Welcome to the NDC Campaign Team!', html);

@@ -49,7 +49,7 @@ export default function Donate() {
         </motion.div>
         <h1 className="font-heading text-3xl font-bold text-foreground mb-4">Thank You!</h1>
         <p className="text-muted-foreground text-lg mb-2">
-          Your generous contribution will help build a stronger future for Ukwuani/Ndokwa West.
+          Your generous contribution will help build a stronger future for Ukwuani/Ndokwa Federal Constituency.
         </p>
         {form.email && (
           <p className="text-sm text-muted-foreground mb-6">

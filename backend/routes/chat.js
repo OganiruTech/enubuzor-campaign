@@ -6,14 +6,14 @@ const router = express.Router();
 
 const CANDIDATE    = 'Ogbuefi Nicholas Enubuzor';
 const PARTY        = 'NDC (National Democratic Congress)';
-const CONSTITUENCY = 'Ukwuani/Ndokwa West Constituency, Delta State';
+const CONSTITUENCY = 'Ukwuani/Ndokwa Federal Constituency, Delta State';
 const SLOGAN       = 'Service to the People';
 
 const getMockResponse = (message) => {
   const m = message.toLowerCase();
 
   if (m.includes('volunteer') || m.includes('join') || m.includes('sign up')) {
-    return `Great to hear you want to get involved! 🎉 You can join the movement by visiting our **Volunteer** page. We have roles for everyone — polling unit agents, ward mobilizers, campaign ambassadors, and general volunteers. Every hand counts in building a stronger Ukwuani/Ndokwa West!`;
+    return `Great to hear you want to get involved! 🎉 You can join the movement by visiting our **Volunteer** page. We have roles for everyone — polling unit agents, ward mobilizers, campaign ambassadors, and general volunteers. Every hand counts in building a stronger Ukwuani/Ndokwa Federal Constituency!`;
   }
 
   if (m.includes('event') || m.includes('rally') || m.includes('meeting') || m.includes('town hall')) {
@@ -33,19 +33,19 @@ const getMockResponse = (message) => {
   }
 
   if (m.includes('who') || m.includes('candidate') || m.includes('enubuzor') || m.includes('nicholas') || m.includes('ogbuefi')) {
-    return `**${CANDIDATE}** is the ${PARTY} candidate for House of Representatives, ${CONSTITUENCY}. He is running on the platform of *"${SLOGAN}"* — committed to bringing real, people-centered representation to the constituency for the 2027 elections.`;
+    return `**${CANDIDATE}** is the ${PARTY} aspirant for House of Representatives, ${CONSTITUENCY}. He is running on the platform of *"${SLOGAN}"* — committed to bringing real, people-centered representation to the constituency for the 2027 elections.`;
   }
 
   if (m.includes('ndc') || m.includes('party') || m.includes('national democratic')) {
-    return `The **National Democratic Congress (NDC)** is a progressive political party in Nigeria dedicated to democratic values, good governance, and service to the people. ${CANDIDATE} proudly flies the NDC flag for Ukwuani/Ndokwa West under the slogan *"${SLOGAN}"*.`;
+    return `The **National Democratic Congress (NDC)** is a progressive political party in Nigeria dedicated to democratic values, good governance, and service to the people. ${CANDIDATE} proudly flies the NDC flag for Ukwuani/Ndokwa Federal Constituency under the slogan *"${SLOGAN}"*.`;
   }
 
   if (m.includes('ward') || m.includes('community') || m.includes('ukwuani') || m.includes('ndokwa')) {
-    return `The Ukwuani/Ndokwa West Constituency covers several wards including Obiaruku, Umukwata, Umuaja, Ebedei, Amai, Obinomba, Umutu, and more. ${CANDIDATE} is committed to visiting every ward and ensuring equal development for all communities.`;
+    return `The Ukwuani/Ndokwa Federal Constituency covers several wards including Obiaruku, Umukwata, Umuaja, Ebedei, Amai, Obinomba, Umutu, and more. ${CANDIDATE} is committed to visiting every ward and ensuring equal development for all communities.`;
   }
 
   if (m.includes('vote') || m.includes('election') || m.includes('2027')) {
-    return `The 2027 general elections are a critical opportunity to elect a representative who truly cares about Ukwuani/Ndokwa West. Vote **${CANDIDATE}** — NDC — for House of Representatives. Make sure you have your PVC (Permanent Voter Card) ready. Your vote is your power! 🗳️`;
+    return `The 2027 general elections are a critical opportunity to elect a representative who truly cares about Ukwuani/Ndokwa Federal Constituency. Vote **${CANDIDATE}** — NDC — for House of Representatives. Make sure you have your PVC (Permanent Voter Card) ready. Your vote is your power! 🗳️`;
   }
 
   if (m.includes('contact') || m.includes('reach') || m.includes('phone') || m.includes('email')) {
@@ -53,10 +53,10 @@ const getMockResponse = (message) => {
   }
 
   if (m.includes('slogan') || m.includes('motto') || m.includes('service')) {
-    return `The NDC campaign slogan is **"${SLOGAN}"** — a commitment that every action taken by ${CANDIDATE} in office will be in direct service to the people of Ukwuani/Ndokwa West.`;
+    return `The NDC campaign slogan is **"${SLOGAN}"** — a commitment that every action taken by ${CANDIDATE} in office will be in direct service to the people of Ukwuani/Ndokwa Federal Constituency.`;
   }
 
-  return `Thank you for your message! 🇳🇬 I'm the official NDC Campaign Assistant for **${CANDIDATE}**. I can help you with:\n\n- Learning about our candidate and campaign promises\n- Finding upcoming events\n- Reporting community issues\n- Joining as a volunteer\n- Making a donation\n\nWhat would you like to know?`;
+  return `Thank you for your message! 🇳🇬 I'm the official NDC Campaign Assistant for **${CANDIDATE}**. I can help you with:\n\n- Learning about our aspirant and campaign promises\n- Finding upcoming events\n- Reporting community issues\n- Joining as a volunteer\n- Making a donation\n\nWhat would you like to know?`;
 };
 
 // POST /api/chat

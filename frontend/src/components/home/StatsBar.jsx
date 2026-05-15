@@ -26,7 +26,7 @@ export default function StatsBar() {
     { label: 'Volunteers',      value: volunteers.length || 0 },
     { label: 'Issues Reported', value: issues.length     || 0 },
     { label: 'Campaign Events', value: events.length     || 0 },
-    { label: 'Communities',     value: '15+' },
+    { label: 'Communities',     value: '30+' },
   ];
 
   return (

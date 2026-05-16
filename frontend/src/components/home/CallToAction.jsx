@@ -29,7 +29,7 @@ export default function CallToAction() {
             </div>
           </Link>
           <Link to="/events">
-            <div className="bg-secondary text-secondary-foreground rounded-2xl p-8 text-center">
+            <div className="bg-red-600 text-secondary-foreground rounded-2xl p-8 text-center">
               <Calendar className="h-10 w-10 mx-auto mb-4" />
               <h3 className="font-heading font-bold text-xl mb-2">Events</h3>
               <p className="text-sm opacity-80">Attend our campaign events and be part of the conversation.</p>
